@@ -35,7 +35,7 @@ smart-parking-management/
 4. Select an available slot.
 5. Continue to the booking page.
 6. Enter a vehicle registration number and duration.
-7. Confirm the booking.
+7. Contributor A: Confirm the parking booking.
 
 Parking availability: show the number of open slots before a user selects a space.
 
