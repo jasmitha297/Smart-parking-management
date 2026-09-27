@@ -23,6 +23,7 @@ smart-parking-management/
 - Vehicle registration input
 - Expected parking duration
 - Estimated fee calculation
+- Estimated hours of parking
 - Booking confirmation
 - Browser localStorage for the selected slot
 
