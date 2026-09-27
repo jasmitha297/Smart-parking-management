@@ -40,3 +40,4 @@ smart-parking-management/
 ## Note
 
 This is a frontend prototype. It does not include a real backend, database, authentication system, or payment gateway.
+Updated directly on GitHub.
