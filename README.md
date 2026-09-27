@@ -1,0 +1,41 @@
+# Smart Parking Management System
+
+A simple frontend prototype for a Smart Parking Management System.
+
+## Project Structure
+
+```text
+smart-parking-management/
+├── index.html
+├── parking.html
+├── booking.html
+├── style.css
+├── script.js
+└── README.md
+```
+
+## Features
+
+- Landing page
+- Parking slot availability
+- Available/occupied slot status
+- Parking slot selection
+- Vehicle registration input
+- Expected parking duration
+- Estimated fee calculation
+- Booking confirmation
+- Browser localStorage for the selected slot
+
+## How to Run
+
+1. Extract the project.
+2. Open `index.html` in a web browser.
+3. Click **Find Parking**.
+4. Select an available slot.
+5. Continue to the booking page.
+6. Enter a vehicle registration number and duration.
+7. Confirm the booking.
+
+## Note
+
+This is a frontend prototype. It does not include a real backend, database, authentication system, or payment gateway.
