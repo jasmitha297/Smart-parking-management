@@ -37,6 +37,8 @@ smart-parking-management/
 6. Enter a vehicle registration number and duration.
 7. Confirm the booking.
 
+Parking availability: show the number of open slots before a user selects a space.
+
 ## Note
 
 This is a frontend prototype. It does not include a real backend, database, authentication system, or payment gateway.
