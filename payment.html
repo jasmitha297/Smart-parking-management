@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartPark - Payment</title>
+
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">P</span>
+                <span>SmartPark</span>
+            </div>
+
+            <div class="secure">
+                🔒 Secure Payment
+            </div>
+        </header>
+
+
+        <!-- Main Content -->
+        <main class="payment-container">
+
+            <!-- Left Side -->
+            <section class="payment-card">
+
+                <h1>Complete Payment</h1>
+
+                <p class="subtitle">
+                    Secure your parking slot by completing the payment.
+                </p>
+
+
+                <!-- Booking Summary -->
+                <div class="booking-summary">
+
+                    <h2>Booking Summary</h2>
+
+                    <div class="summary-row">
+                        <span>Parking Slot</span>
+                        <strong id="slot">A-12</strong>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Vehicle Number</span>
+                        <strong id="vehicle">TN38AB1234</strong>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Duration</span>
+                        <strong id="duration">3 Hours</strong>
+                    </div>
+
+                    <div class="summary-row total-row">
+                        <span>Total Amount</span>
+                        <strong id="amount">₹120</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Payment Methods -->
+                <h2 class="section-title">Choose Payment Method</h2>
+
+                <div class="payment-methods">
+
+                    <label class="payment-option">
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="upi"
+                            checked
+                        >
+
+                        <div class="payment-icon">UPI</div>
+
+                        <div>
+                            <strong>UPI</strong>
+                            <p>Google Pay, PhonePe, Paytm</p>
+                        </div>
+                    </label>
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="card"
+                        >
+
+                        <div class="payment-icon">💳</div>
+
+                        <div>
+                            <strong>Credit / Debit Card</strong>
+                            <p>Visa, Mastercard, RuPay</p>
+                        </div>
+
+                    </label>
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="netbanking"
+                        >
+
+                        <div class="payment-icon">🏦</div>
+
+                        <div>
+                            <strong>Net Banking</strong>
+                            <p>All major banks supported</p>
+                        </div>
+
+                    </label>
+
+                </div>
+
+
+                <!-- UPI Details -->
+                <div id="upi-section" class="extra-section">
+
+                    <label for="upi-id">
+                        UPI ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="upi-id"
+                        placeholder="example@upi"
+                    >
+
+                </div>
+
+
+                <!-- Card Details -->
+                <div
+                    id="card-section"
+                    class="extra-section hidden"
+                >
+
+                    <label for="card-number">
+                        Card Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="card-number"
+                        maxlength="16"
+                        placeholder="1234 5678 9012 3456"
+                    >
+
+
+                    <div class="card-row">
+
+                        <div>
+                            <label for="expiry">
+                                Expiry
+                            </label>
+
+                            <input
+                                type="text"
+                                id="expiry"
+                                placeholder="MM/YY"
+                            >
+                        </div>
+
+
+                        <div>
+                            <label for="cvv">
+                                CVV
+                            </label>
+
+                            <input
+                                type="password"
+                                id="cvv"
+                                maxlength="3"
+                                placeholder="•••"
+                            >
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Net Banking -->
+                <div
+                    id="bank-section"
+                    class="extra-section hidden"
+                >
+
+                    <label for="bank">
+                        Select Bank
+                    </label>
+
+                    <select id="bank">
+
+                        <option value="">
+                            Select your bank
+                        </option>
+
+                        <option>State Bank of India</option>
+                        <option>HDFC Bank</option>
+                        <option>ICICI Bank</option>
+                        <option>Axis Bank</option>
+                        <option>Bank of Baroda</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Pay Button -->
+
+                <button
+                    id="pay-button"
+                    class="pay-button"
+                >
+                    Pay ₹120
+                </button>
+
+
+                <p class="demo-note">
+                    🔒 Demo Payment Gateway — No real money will be charged.
+                </p>
+
+            </section>
+
+        </main>
+
+
+        <!-- Processing Popup -->
+
+        <div
+            id="processing"
+            class="overlay hidden"
+        >
+
+            <div class="processing-box">
+
+                <div class="loader"></div>
+
+                <h2>Processing Payment...</h2>
+
+                <p>
+                    Please don't close this window.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Success Popup -->
+
+        <div
+            id="success"
+            class="overlay hidden"
+        >
+
+            <div class="success-box">
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <h1>Payment Successful!</h1>
+
+                <p class="success-message">
+                    Your parking slot has been confirmed.
+                </p>
+
+
+                <div class="receipt">
+
+                    <div>
+                        <span>Parking Slot</span>
+                        <strong id="success-slot">A-12</strong>
+                    </div>
+
+                    <div>
+                        <span>Vehicle</span>
+                        <strong id="success-vehicle">
+                            TN38AB1234
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Duration</span>
+                        <strong id="success-duration">
+                            3 Hours
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Amount Paid</span>
+                        <strong id="success-amount">
+                            ₹120
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Transaction ID</span>
+                        <strong id="transaction-id">
+                            SP000000
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="confirmed">
+                    ✓ BOOKING CONFIRMED
+                </div>
+
+
+                <button
+                    class="done-button"
+                    onclick="closeSuccess()"
+                >
+                    Done
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="payment.js"></script>
+
+</body>
+</html>

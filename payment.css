@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+
+/* ---------------- HEADER ---------------- */
+
+.header {
+    height: 70px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: bold;
+}
+
+.secure {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* ---------------- MAIN ---------------- */
+
+.payment-container {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 45px auto;
+
+    padding: 0 20px;
+}
+
+.payment-card {
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 35px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.payment-card h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #64748b;
+    margin-bottom: 28px;
+}
+
+
+/* ---------------- BOOKING SUMMARY ---------------- */
+
+.booking-summary {
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    margin-bottom: 30px;
+}
+
+.booking-summary h2 {
+    font-size: 17px;
+
+    margin-bottom: 15px;
+}
+
+.summary-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #64748b;
+}
+
+.summary-row strong {
+    color: #1f2937;
+}
+
+.total-row {
+    border-bottom: none;
+
+    padding-top: 15px;
+
+    font-size: 18px;
+}
+
+.total-row strong {
+    color: #2563eb;
+}
+
+
+/* ---------------- PAYMENT METHODS ---------------- */
+
+.section-title {
+    font-size: 17px;
+
+    margin-bottom: 14px;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.payment-option:hover {
+    border-color: #2563eb;
+    background: #f8fbff;
+}
+
+.payment-option input {
+    width: 18px;
+    height: 18px;
+}
+
+.payment-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eef4ff;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    color: #2563eb;
+}
+
+.payment-option p {
+    margin-top: 4px;
+
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* ---------------- INPUTS ---------------- */
+
+.extra-section {
+    margin-top: 20px;
+}
+
+.extra-section label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.extra-section input,
+.extra-section select {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.extra-section input:focus,
+.extra-section select:focus {
+    border-color: #2563eb;
+}
+
+.card-row {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+.card-row > div {
+    width: 50%;
+}
+
+.card-row input {
+    width: 100%;
+}
+
+
+/* ---------------- BUTTON ---------------- */
+
+.pay-button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.pay-button:hover {
+    background: #1d4ed8;
+}
+
+.pay-button:disabled {
+    background: #94a3b8;
+
+    cursor: not-allowed;
+}
+
+.demo-note {
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    color: #64748b;
+}
+
+
+/* ---------------- HIDDEN ---------------- */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ---------------- OVERLAY ---------------- */
+
+.overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.65);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+
+/* ---------------- PROCESSING ---------------- */
+
+.processing-box {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    width: 330px;
+}
+
+.loader {
+    width: 45px;
+    height: 45px;
+
+    margin: 0 auto 20px;
+
+    border: 4px solid #e2e8f0;
+
+    border-top: 4px solid #2563eb;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* ---------------- SUCCESS ---------------- */
+
+.success-box {
+    background: white;
+
+    width: 450px;
+
+    max-width: 100%;
+
+    padding: 35px;
+
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+.success-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #dcfce7;
+
+    color: #16a34a;
+
+    font-size: 35px;
+
+    font-weight: bold;
+}
+
+.success-box h1 {
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+.success-message {
+    color: #64748b;
+
+    margin-bottom: 25px;
+}
+
+
+/* ---------------- RECEIPT ---------------- */
+
+.receipt {
+    text-align: left;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    margin-bottom: 20px;
+}
+
+.receipt div {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.receipt div:last-child {
+    border-bottom: none;
+}
+
+.receipt span {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.receipt strong {
+    font-size: 14px;
+}
+
+
+/* ---------------- CONFIRMED ---------------- */
+
+.confirmed {
+    background: #dcfce7;
+
+    color: #15803d;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.done-button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 0 20px;
+    }
+
+    .payment-card {
+        padding: 25px 20px;
+    }
+
+    .card-row {
+        flex-direction: column;
+    }
+
+    .card-row > div {
+        width: 100%;
+    }
+
+}
