@@ -39,6 +39,12 @@ smart-parking-management/
 
 Parking availability: show the number of open slots before a user selects a space.
 The parking availability display refreshes regularly.
+
+## Payment Module
+
+A simulated payment gateway has been added to the Smart Parking Management System.
+It allows users to complete a demo payment and receive booking confirmation.
+
 ## Note
 
 This is a frontend prototype. It does not include a real backend, database, authentication system, or payment gateway.
