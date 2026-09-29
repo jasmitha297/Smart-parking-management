@@ -32,7 +32,7 @@ smart-parking-management/
 1. Extract the project.
 2. Open `index.html` in a web browser.
 3. Click **Find Parking**.
-4. Select an available slot.
+4. Contributor B chooses an available slot.
 5. Continue to the booking page.
 6. Enter a vehicle registration number and duration.
 7. Contributor A: Confirm the parking booking and get the message
