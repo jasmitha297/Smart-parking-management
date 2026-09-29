@@ -38,7 +38,7 @@ smart-parking-management/
 7. Contributor A: Confirm the parking booking and get the message
 
 Parking availability: show the number of open slots before a user selects a space.
-
+The parking availability display refreshes regularly.
 ## Note
 
 This is a frontend prototype. It does not include a real backend, database, authentication system, or payment gateway.
