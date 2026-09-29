@@ -37,6 +37,7 @@ smart-parking-management/
 6. Enter a vehicle registration number and duration.
 7. Contributor A: Confirm the parking booking and get the message
 
+## Parking- integration module
 Parking availability: show the number of open slots before a user selects a space.
 The parking availability display refreshes regularly.
 
